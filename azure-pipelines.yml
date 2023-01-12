@@ -9,9 +9,17 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+parameters:
+  - name: TfFilesSubPath
+    type: string
+    default: ""
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
+- script: echo TfFilesSubPath!
+  displayName: 'TfFilesSubPath: ${TfFilesSubPath}'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
