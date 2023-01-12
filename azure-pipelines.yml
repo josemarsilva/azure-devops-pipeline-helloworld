@@ -11,7 +11,6 @@ pool:
 
 parameters:
   - name: TfFilesSubPath
-    type: string
     default: ""
 
 steps:
